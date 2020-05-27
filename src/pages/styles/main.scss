@@ -1,0 +1,17 @@
+@import "./variables";
+@import "./appbar";
+@import "./navigation";
+@import "./carousel";
+@function weight($weight-name) {
+  @return map-get($weight-name);
+}
+
+body {
+  margin: 0;
+  background-color: none;
+}
+
+// header {
+//   // position: fixed;
+//   width: 100%;
+// }
