@@ -3,6 +3,7 @@
 @import "./navigation";
 @import "./carousel";
 @import "./subcategories";
+@import "./general";
 
 @function weight($weight-name) {
   @return map-get($weight-name);
@@ -13,7 +14,7 @@ body {
   background-color: none;
 }
 
-// header {
-//   // position: fixed;
-//   width: 100%;
-// }
+hr {
+  height: 1px;
+  background-color: $brand-color;
+}

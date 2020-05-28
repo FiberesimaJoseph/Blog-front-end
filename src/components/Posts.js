@@ -1,4 +1,5 @@
 import React from "react";
+import { Card } from "react-bootstrap";
 
 const posts = [
   {
@@ -19,10 +20,14 @@ const Posts = () => {
   return (
     <div className="posts">
       {posts.map((post, i) => (
-        <div key={i}>
-          <h2>{post.title}</h2>
-          <p>{post.content}</p>
-        </div>
+        <Card style={{ width: "50vw" }} className="single-post">
+          <Card.Img variant="top" src="https://picsum.photos/500/500" />
+          <Card.Body>
+            <Card.Title>{post.title}</Card.Title>
+            <Card.Text>{post.content}</Card.Text>
+            <button>Read more ></button>
+          </Card.Body>
+        </Card>
       ))}
     </div>
   );
