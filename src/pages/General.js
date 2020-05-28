@@ -1,7 +1,14 @@
 import React from "react";
-import Slider from "../components/Slider";
+import SubCategories from "../components/SubCategories";
+import Slider from "../components/Carousel";
+
 const General = () => {
-  return <Slider />;
+  return (
+    <div>
+      <Slider />
+      <SubCategories />
+    </div>
+  );
 };
 
 export default General;

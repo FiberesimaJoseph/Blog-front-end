@@ -1,44 +1,43 @@
-import React from "react";
-import Slider from "react-slick";
+import React, { useState, useEffect } from "react";
+import { Carousel } from "react-bootstrap";
 
-const sliderContents = [
-  {
-    title: "Vulputate Mollis Ultricies Fermentum Parturient",
-    description:
-      "venenatis vestibulum. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Cras justo odio, dapibus ac facilisis.",
-    button: "Read More",
-    image: "https://i.imgur.com/ZXBtVw7.jpg",
-  },
-  {
-    title: "Tortor Dapibus Commodo Aenean Quam",
-    description:
-      "Nullam id dolor id nibh ultricies vehicula ut id elit. Cras mattis consectetur purus sit amet fermentum. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Donec sed odio dui.",
-    button: "Discover",
-    image: "https://i.imgur.com/DCdBXcq.jpg",
-    user: "Erich Behrens",
-    userProfile: "https://i.imgur.com/0Clfnu7.png",
-  },
-];
-const Carousel = () => {
-  const settings = {
-    infinite: false,
-    speed: 1000,
-    arrows: true,
-    slidesToShow: 1,
-    slidesToScroll: 1,
-  };
+const Slider = () => {
+  const [width, setWidth] = useState(window.innerWidth);
+  useEffect(() => {
+    window.addEventListener("resize", setWidth(window.innerWidth));
+  }, [width]);
+  const sliderContents = [
+    {
+      title: "Vulputate Mollis Ultricies Fermentum Parturient",
+      description:
+        "venenatis vestibulum. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Cras justo odio, dapibus ac facilisis.",
+      button: "Read More",
+      image: `https://picsum.photos/${width}/300`,
+    },
+    {
+      title: "Tortor Dapibus Commodo Aenean Quam",
+      description:
+        "Nullam id dolor id nibh ultricies vehicula ut id elit. Cras mattis consectetur purus sit amet fermentum. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Donec sed odio dui.",
+      button: "Discover",
+      image: `https://picsum.photos/${width}/300`,
+    },
+  ];
   return (
-    <div className="carousel">
-      <Slider {...settings}>
-        {sliderContents.map((item, i) => (
-          <div key={i}>
-            <button>Travel</button>
-            <h2>{item.title}</h2>
-          </div>
-        ))}
-      </Slider>
-    </div>
+    <Carousel>
+      {sliderContents.map((item, i) => {
+        return (
+          <Carousel.Item key={i}>
+            <img src={item.image} alt={item.title} width={width} />
+            <Carousel.Caption>
+              <button>{item.button}</button>
+              <h3>lorem ispum</h3>
+              <p>{item.description}</p>
+            </Carousel.Caption>
+          </Carousel.Item>
+        );
+      })}
+    </Carousel>
   );
 };
 
-export default Carousel;
+export default Slider;

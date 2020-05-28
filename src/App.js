@@ -2,7 +2,7 @@ import React from "react";
 // import Login from "./pages/Login";
 import AppBar from "./components/AppBar";
 import Navigation from "./components/Navigation";
-import Carousel from "./components/Carousel";
+import General from "./pages/General";
 const App = () => {
   return (
     <div>
@@ -10,7 +10,7 @@ const App = () => {
         <AppBar />
         <Navigation />
       </header>
-      {/* <Carousel /> */}
+      <General />
     </div>
   );
 };

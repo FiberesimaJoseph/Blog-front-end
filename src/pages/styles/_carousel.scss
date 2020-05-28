@@ -1,4 +1,14 @@
-.slider-wrapper {
-  height: 20vh;
-  position: relative;
+.carousel {
+  button {
+    height: 40px;
+    background-color: $brand-color;
+    border: none;
+    outline: none;
+    color: $main-color;
+    border-radius: 5px;
+    margin-bottom: 5vh;
+    &:active {
+      height: 50px;
+    }
+  }
 }

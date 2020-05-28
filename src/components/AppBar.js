@@ -27,7 +27,7 @@ const AppBar = () => {
           </button>
         </li>
         {navLinks.map((link, i) => (
-          <li className="app-bar-text">
+          <li className="app-bar-text" key={i}>
             <a href={link.path}>{link.title}</a>
           </li>
         ))}

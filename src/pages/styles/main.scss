@@ -2,6 +2,8 @@
 @import "./appbar";
 @import "./navigation";
 @import "./carousel";
+@import "./subcategories";
+
 @function weight($weight-name) {
   @return map-get($weight-name);
 }

@@ -6,16 +6,28 @@ const navLinks = [
     path: "/general",
   },
   {
-    title: "Musics",
+    title: "AFRICAN STORIES",
+    path: "/african-stories",
+  },
+  {
+    title: "LEARNING",
+    path: "/general",
+  },
+  {
+    title: "MUSICS",
     path: "/musics",
   },
   {
-    title: "Sports",
+    title: "SPORTS",
     path: "/sports",
   },
   {
-    title: "News",
+    title: "NEWS",
     path: "/news",
+  },
+  {
+    title: "TRAVELS",
+    path: "/general",
   },
   {
     title: "Contact Us",
@@ -28,7 +40,7 @@ const Navigation = () => {
     <div className="nav-bar">
       <ul>
         {navLinks.map((link, i) => (
-          <li>
+          <li key={i}>
             <a href={link.path}>{link.title}</a>
           </li>
         ))}
