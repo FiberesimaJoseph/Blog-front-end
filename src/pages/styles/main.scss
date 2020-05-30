@@ -4,6 +4,7 @@
 @import "./carousel";
 @import "./subcategories";
 @import "./general";
+@import "./auth";
 
 @function weight($weight-name) {
   @return map-get($weight-name);

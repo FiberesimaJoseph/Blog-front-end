@@ -1,6 +1,8 @@
 .general-body {
   display: flex;
   margin: 10px 0 0;
+  justify-content: space-around;
+  // align-items: center;
 }
 
 .posts {
@@ -9,7 +11,7 @@
 
 .card {
   margin-bottom: 10px;
-  width: 25vw;
+  box-shadow: 0px 3px 6px #00000029;
 }
 
 .sidebar {
@@ -17,12 +19,14 @@
   font-family: $font-family;
   color: $text-color;
   opacity: 1;
-  margin: 0 10px 0 40px;
-  box-shadow: 0px 3px 6px #00000029;
+  box-shadow: 0px 3px 6px #fff3f329;
   padding: 5px;
+  display: flex;
+  flex-flow: column wrap;
 
   h4 {
     color: $brand-color;
+    font-size: medium;
   }
 }
 
@@ -30,4 +34,42 @@
   display: flex;
   margin: 10px;
   padding: 5px;
+
+  img {
+    padding: 3px;
+    height: 80%;
+  }
+  p {
+    padding: 3px;
+    margin: 0;
+  }
+}
+
+.popular-post {
+  width: 80%;
+  margin: auto;
+  margin-top: 30px;
+}
+
+.card-body {
+  button {
+    height: 40px;
+    background-color: $brand-color;
+    border: none;
+    outline: none;
+    color: $main-color;
+    border-radius: 5px;
+    margin-bottom: 5vh;
+    &:active {
+      height: 50px;
+    }
+  }
+}
+
+.popular-post-container {
+  margin-top: 10px;
+  h3 {
+    font-size: medium;
+    color: $brand-color;
+  }
 }

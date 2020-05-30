@@ -25,10 +25,7 @@ const navLinks = [
     title: "NEWS",
     path: "/news",
   },
-  {
-    title: "TRAVELS",
-    path: "/general",
-  },
+
   {
     title: "Contact Us",
     path: "/contact-us",

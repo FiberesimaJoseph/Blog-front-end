@@ -1,7 +1,8 @@
 import React from "react";
 import { Card } from "react-bootstrap";
 
-const img = "https://picsum.photos/50/50";
+const img = "https://picsum.photos/100/100";
+
 const recentPosts = [
   {
     title: "Certainty listening no behavior existence assurance situation",
@@ -17,24 +18,27 @@ const recentPosts = [
   },
 ];
 
-const popularPost = [
-  {
-    title: "Wahala dey",
-    content: "Certainty listening no behavior existence assurance situation",
-  },
-];
+const popularPost = {
+  title: "Wahala dey",
+  content: "Certainty listening no behavior existence assurance situation",
+};
 
 const PopularPost = () => {
   return (
-    <Card style={{ width: "25vw" }}>
-      <Card.Img variant="top" src={img} />
-      <Card.Body>
-        <Card.Title>{popularPost.title}</Card.Title>
-        <Card.Text>{popularPost.content}</Card.Text>
-      </Card.Body>
-    </Card>
+    <div className="popular-post-container">
+      <h3>Popular Post</h3>
+      <hr />
+      <Card className="popular-post">
+        <Card.Img variant="top" src={img} />
+        <Card.Body>
+          <Card.Title>{popularPost.title}</Card.Title>
+          <Card.Text>{popularPost.content}</Card.Text>
+        </Card.Body>
+      </Card>
+    </div>
   );
 };
+
 const RecentPosts = () => {
   return (
     <div className="recent-posts">
@@ -52,7 +56,7 @@ const RecentPosts = () => {
 
 const Sidebar = () => {
   return (
-    <div className="sidebar">
+    <div className="sidebar" style={{ width: "25vw" }}>
       <RecentPosts />
       <PopularPost />
     </div>

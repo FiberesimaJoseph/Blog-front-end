@@ -30,7 +30,7 @@ const subCategories = [
 
 const SubCategories = () => {
   return (
-    <div className="sub-categories">
+    <div className="sub-categories" style={{ width: "20vw" }}>
       <h4>SUB CATEGORIES</h4>
       <hr />
       <ul>
