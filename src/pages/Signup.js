@@ -35,7 +35,7 @@ export default function Signup() {
             </li>
             <li className="nav-item ml-auto mt-2">
               <a className="nav-link" href="/about">
-                ABOUT
+                ABOUT US
               </a>
             </li>
             <li className="nav-item mt-2">
@@ -46,9 +46,9 @@ export default function Signup() {
           </ul>
           <div className="row">
             <div className="col-8 ml-3 mt-5">
-              <span className="h1 d-block font-weight-bold">WELCOME BACK</span>
+              <span className="h1 d-block font-weight-bold">Welcome</span>
               <span className="h4 d-block text_gray font-weight-bold">
-                Entertainment awaits you
+                We are Ready to Entertain You
               </span>
             </div>
             <div className="col-12 mt-5">
