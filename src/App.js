@@ -4,6 +4,7 @@ import Login from "./pages/Login";
 import AppBar from "./components/AppBar";
 import Navigation from "./components/Navigation";
 import General from "./pages/General";
+import Signup from "./pages/Signup";
 
 const NavRoute = ({ exact, path, component }) => {
   return (
@@ -23,6 +24,7 @@ const App = () => {
       <Switch>
         <NavRoute exact path="/" component={General} />
         <Route exact path="/login" component={Login} />
+        <Route exact path="/register" component={Signup} />
         <NavRoute exact path="/general" component={General} />
       </Switch>
     </BrowserRouter>

@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 
-export default function Login() {
+export default function Signup() {
   const [input, setInput] = useState({});
 
   const handleFormInput = (e) => {
@@ -36,7 +36,7 @@ export default function Login() {
             </li>
             <li className="nav-item ml-auto mt-2">
               <a className="nav-link" href="/about">
-                ABOUT
+                ABOUT US
               </a>
             </li>
             <li className="nav-item mt-2">
@@ -47,26 +47,21 @@ export default function Login() {
           </ul>
           <div className="row">
             <div className="col-8 ml-3 mt-5">
-              <span className="h1 d-block font-weight-bold">WELCOME BACK</span>
+              <span className="h1 d-block font-weight-bold">Welcome</span>
               <span className="h4 d-block text_gray font-weight-bold">
-                Entertainment awaits you
+                We are Ready to Entertain You
               </span>
             </div>
             <div className="col-12 mt-5">
               <form onSubmit={handleFormSubmit}>
                 <div className="form-group col-8 mb-4">
-                  <label htmlFor="email">Email</label>
+                  <label htmlFor="userName">Username</label>
                   <input
                     type="text"
                     className="form-control"
-<<<<<<< HEAD
-                    placeholder="Email"
-                    name=""
-=======
-                    name="email"
->>>>>>> b314c61238b442d2449fec32f36af3ec60c18b6e
+                    name="userName"
                     onChange={handleFormInput}
-                    id="email"
+                    id="userName"
                   />
                 </div>
                 <div className="form-group col-8 mb-4">
@@ -74,12 +69,7 @@ export default function Login() {
                   <input
                     type="password"
                     className="form-control"
-<<<<<<< HEAD
-                    name=""
-                    placeholder="password"
-=======
                     name="password"
->>>>>>> b314c61238b442d2449fec32f36af3ec60c18b6e
                     onChange={handleFormInput}
                     id="password"
                   />
@@ -88,8 +78,22 @@ export default function Login() {
                     onClick={togglepasswordvisibility}
                   ></div>
                 </div>
+                <div className="form-group col-8 mb-4">
+                  <label htmlFor="retypePassword">Password</label>
+                  <input
+                    type="password"
+                    className="form-control"
+                    name="retypepassword"
+                    onChange={handleFormInput}
+                    id="retypepassword"
+                  />
+                  <div
+                    className="showpassword"
+                    onClick={togglepasswordvisibility}
+                  ></div>
+                </div>
                 <div className="col-12">
-                  <Link to="/register">
+                  <Link to="/login">
                     <button className="btn btn-default text-orangered ml-5">
                       <span>
                         <svg
@@ -132,11 +136,11 @@ export default function Login() {
                           <g></g>
                         </svg>
                       </span>
-                      Sign Up
+                      Sign In
                     </button>
                   </Link>
                   <button type="submit" className="btn btn-orange px-5 ml-5">
-                    Sign In
+                    Sign Up
                   </button>
                 </div>
               </form>

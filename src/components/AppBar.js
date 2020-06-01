@@ -16,6 +16,7 @@ const AppBar = () => {
   return (
     <div className="app-bar">
       <img src="/logo.svg" alt="logo"></img>
+
       <ul>
         <li className="search-box">
           <input
