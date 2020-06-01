@@ -59,7 +59,7 @@ export default function Login() {
                     type="text"
                     className="form-control"
                     placeholder="Email"
-                    name="email"
+                    name=""
                     onChange={handleFormInput}
                     id="email"
                   />
@@ -69,7 +69,7 @@ export default function Login() {
                   <input
                     type="password"
                     className="form-control"
-                    name="password"
+                    name=""
                     placeholder="password"
                     onChange={handleFormInput}
                     id="password"

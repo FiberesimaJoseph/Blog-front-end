@@ -20,7 +20,7 @@ const Footer = () => {
           {link}
         </a>
       ))}
-      <p>Biosoky entertainment ltd</p>
+      <p> Powered By Biosoky Entertainment </p>
     </div>
   );
 };
