@@ -2,16 +2,12 @@ import React from "react";
 
 const navLinks = [
   {
-    title: "General",
+    title: "GENERAL",
     path: "/general",
   },
   {
     title: "AFRICAN STORIES",
     path: "/african-stories",
-  },
-  {
-    title: "LEARNING",
-    path: "/general",
   },
   {
     title: "MUSICS",
@@ -27,7 +23,7 @@ const navLinks = [
   },
 
   {
-    title: "Contact Us",
+    title: "CONTACT US",
     path: "/contact-us",
   },
 ];
