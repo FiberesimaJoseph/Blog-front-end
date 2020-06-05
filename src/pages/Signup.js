@@ -1,12 +1,16 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
+import userService from "../services/userService";
 
 export default function Signup() {
   const [input, setInput] = useState({});
 
-  const handleFormInput = (e) => {
-    e.persist();
-    setInput((input) => ({ ...input, [e.target.name]: e.target.value }));
+  const handleFormInput = (event) => {
+    event.persist();
+    setInput((input) => ({
+      ...input,
+      [event.target.name]: event.target.value,
+    }));
   };
 
   const togglepasswordvisibility = () => {
@@ -18,9 +22,9 @@ export default function Signup() {
     }
   };
 
-  const handleFormSubmit = (e) => {
-    e.preventDefault();
-    console.log(input);
+  const handleFormSubmit = (event) => {
+    event.preventDefault();
+    userService.register(input);
   };
 
   return (
@@ -55,13 +59,13 @@ export default function Signup() {
             <div className="col-12 mt-5">
               <form onSubmit={handleFormSubmit}>
                 <div className="form-group col-8 mb-4">
-                  <label htmlFor="userName">Username</label>
+                  <label htmlFor="email">Email</label>
                   <input
                     type="text"
                     className="form-control"
-                    name="userName"
+                    name="email"
                     onChange={handleFormInput}
-                    id="userName"
+                    id="email"
                   />
                 </div>
                 <div className="form-group col-8 mb-4">
@@ -79,7 +83,7 @@ export default function Signup() {
                   ></div>
                 </div>
                 <div className="form-group col-8 mb-4">
-                  <label htmlFor="retypePassword">Password</label>
+                  <label htmlFor="retypePassword">Re-type Password</label>
                   <input
                     type="password"
                     className="form-control"
