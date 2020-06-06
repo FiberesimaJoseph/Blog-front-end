@@ -73,3 +73,42 @@
     color: $brand-color;
   }
 }
+
+.about-ceo {
+  div {
+    display: flex;
+
+    img {
+      border-radius: 100%;
+      margin: 0 20px 0 20px;
+    }
+    div {
+      display: flex;
+      flex-direction: column;
+
+      h1 {
+        color: $brand-color;
+      }
+    }
+  }
+}
+
+.developers {
+  h1 {
+    color: $brand-color;
+  }
+}
+
+.developer-detail {
+  margin: 30px;
+  padding: 10px;
+  img {
+    border-radius: 100%;
+    width: 20vh;
+    margin: 0 10px 0 10px;
+    padding: 10px;
+  }
+  span {
+    margin: 0 10px 0 10px;
+  }
+}

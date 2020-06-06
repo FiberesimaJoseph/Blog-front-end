@@ -21,7 +21,7 @@ const Posts = () => {
     <div className="posts">
       {posts.map((post, i) => (
         <Card style={{ width: "45vw" }} key={i} className="single-post">
-          <Card.Img variant="top" src="https://picsum.photos/5000/3000" />
+          <Card.Img variant="top" src="https://picsum.photos/400/400" />
           <Card.Body>
             <Card.Title>{post.title}</Card.Title>
             <Card.Text>{post.content}</Card.Text>

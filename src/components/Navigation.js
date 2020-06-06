@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const navLinks = [
   {
@@ -34,7 +35,7 @@ const Navigation = () => {
       <ul>
         {navLinks.map((link, i) => (
           <li key={i}>
-            <a href={link.path}>{link.title}</a>
+            <Link to={link.path}>{link.title}</Link>
           </li>
         ))}
       </ul>
