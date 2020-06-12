@@ -1,16 +1,16 @@
 import React from "react";
-// import { Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 
-// const navLinks = [
-//   {
-//     title: "LOGIN",
-//     path: "/login",
-//   },
-//   {
-//     title: "REGISTER",
-//     path: "/register",
-//   },
-// ];
+const navLinks = [
+  {
+    title: "LOGIN",
+    path: "/login",
+  },
+  {
+    title: "REGISTER",
+    path: "/register",
+  },
+];
 
 const AppBar = () => {
   return (
@@ -28,11 +28,11 @@ const AppBar = () => {
             <img src="/searchIcon.svg" alt="ico"></img>
           </button>
         </li>
-        {/* {navLinks.map((link, i) => (
+        {navLinks.map((link, i) => (
           <li className="app-bar-text" key={i}>
             <Link to={link.path}>{link.title}</Link>
           </li>
-        ))} */}
+        ))}
       </ul>
     </div>
   );
