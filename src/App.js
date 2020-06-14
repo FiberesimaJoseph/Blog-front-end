@@ -7,6 +7,7 @@ import General from "./pages/General";
 import Signup from "./pages/Signup";
 import About from "./pages/About";
 import Developers from "./pages/Developers";
+import Admin from "./pages/Admin";
 
 const NavRoute = ({ exact, path, component }) => {
   return (
@@ -30,6 +31,7 @@ const App = () => {
         <NavRoute exact path="/general" component={General} />
         <NavRoute exact path="/about-us" component={About}></NavRoute>
         <NavRoute exact path="/developers" component={Developers}></NavRoute>
+        <Route path="/admin" component={Admin} />
       </Switch>
     </BrowserRouter>
   );
