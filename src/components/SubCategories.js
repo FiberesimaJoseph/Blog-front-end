@@ -1,5 +1,6 @@
 import React from "react";
 import Footer from "./Footer";
+import { Nav } from "react-bootstrap";
 
 const subCategories = [
   {
@@ -33,14 +34,15 @@ const SubCategories = () => {
     <div className="sub-categories" style={{ width: "20vw" }}>
       <h4>SUB CATEGORIES</h4>
       <hr />
-      <ul>
+
+      <Nav defaultActiveKey="/home" className="flex-column sub-categories">
         {subCategories.map((item, i) => (
-          <li key={i}>
-            <input type="radio" />
+          <Nav.Link key={i}>
+            <input type="radio" className="mr-1" />
             {item.category} ({item.posts})
-          </li>
+          </Nav.Link>
         ))}
-      </ul>
+      </Nav>
       <hr />
       <Footer />
     </div>

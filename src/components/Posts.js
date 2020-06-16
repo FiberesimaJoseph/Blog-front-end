@@ -25,7 +25,7 @@ const Posts = () => {
           <Card.Body>
             <Card.Title>{post.title}</Card.Title>
             <Card.Text>{post.content}</Card.Text>
-            <button>Read more</button>
+            <button className="px-3">Read more</button>
           </Card.Body>
         </Card>
       ))}

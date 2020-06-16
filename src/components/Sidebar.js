@@ -29,7 +29,7 @@ const PopularPost = () => {
       <h3>Popular Post</h3>
       <hr />
       <Card className="popular-post">
-        <Card.Img variant="top" src={img} />
+        <Card.Img variant="top" className="img-fluid" src={img} />
         <Card.Body>
           <Card.Title>{popularPost.title}</Card.Title>
           <Card.Text>{popularPost.content}</Card.Text>
