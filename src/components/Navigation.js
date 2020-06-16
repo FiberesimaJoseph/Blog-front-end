@@ -35,7 +35,9 @@ const Navigation = () => {
     <Nav fill className="my-2">
       {navLinks.map((link, i) => (
         <Nav.Item key={i}>
-          <Nav.Link to={link.path}>{link.title}</Nav.Link>
+          <Nav.Link>
+          <Link to={link.path}>{link.title}</Link>
+          </Nav.Link>
         </Nav.Item>
       ))}
     </Nav>
