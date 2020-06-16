@@ -202,7 +202,7 @@
   }
 }
 
-@media only screen and (min-width: 651px) and (max-width: 900px) {
+@media only screen and (min-width: 651px) and (max-width: 768px) {
   .nav-item .nav-link {
     padding: 0.5rem 1rem;
   }
@@ -233,5 +233,16 @@
   .recent-post-card {
     display: flex;
     flex-direction: column;
+  }
+}
+
+@media only screen and (min-width: 769px) and (max-width: 1124px) {
+  .recent-post-card {
+    display: flex;
+    flex-direction: column;
+  }
+  .sub-categories .nav-link {
+    padding: .5rem 0;
+    color: #919192;
   }
 }

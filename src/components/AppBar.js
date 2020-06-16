@@ -26,9 +26,7 @@ const AppBar = () => {
           <img src="/searchIcon.svg" alt="ico"></img>
         </button>
           {navLinks.map((link, i) => (
-            <Nav.Link className="app-bar-text mx-2" key={i}>
-              <Link to={link.path}>{link.title}</Link>
-            </Nav.Link>
+            <Nav.Link className="app-bar-text mx-2" to={link.path} key={i}>{link.title}</Nav.Link>
           ))}
         </Nav>
       </Navbar.Collapse>
