@@ -94,17 +94,21 @@
 
 .developers {
   h1 {
-    color: $brand-color;
+    color: #27496d;
+    text-align: center;
+    font-size: 30px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
   }
 }
 
 .developer-detail {
   margin: 30px;
   padding: 10px;
+  text-align: left;
   img {
     border-radius: 100%;
     width: 20vh;
-    margin: 0 10px 0 10px;
+     margin: 0 10px 0 10px;
     padding: 10px;
   }
   span {
