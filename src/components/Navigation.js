@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { Nav } from "react-bootstrap";
 
 const navLinks = [
   {
@@ -31,15 +32,23 @@ const navLinks = [
 
 const Navigation = () => {
   return (
-    <div className="nav-bar">
-      <ul>
-        {navLinks.map((link, i) => (
-          <li key={i}>
-            <Link to={link.path}>{link.title}</Link>
-          </li>
-        ))}
-      </ul>
-    </div>
+    <Nav className="my-2">
+      {navLinks.map((link, i) => (
+        <Nav.Item key={i}>
+          <Nav.Link to={link.path}>{link.title}</Nav.Link>
+        </Nav.Item>
+      ))}
+    </Nav>
+
+    // <div className="nav-bar">
+    //   <ul className="nav">
+    //     {navLinks.map((link, i) => (
+    //       <li className="nav-item" key={i}>
+    //         <Link to={link.path}>{link.title}</Link>
+    //       </li>
+    //     ))}
+    //   </ul>
+    // </div>
   );
 };
 

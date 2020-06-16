@@ -33,6 +33,7 @@ const SubCategories = () => {
     <div className="sub-categories" style={{ width: "20vw" }}>
       <h4>SUB CATEGORIES</h4>
       <hr />
+
       <ul>
         {subCategories.map((item, i) => (
           <li key={i}>

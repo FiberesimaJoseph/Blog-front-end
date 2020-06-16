@@ -162,8 +162,76 @@
 }
 
 @media only screen and (max-width: 650px) {
+  .logo {
+    width: 120px;
+  }
+  .navbar-light .navbar-toggler {
+    border: none;
+  }
+  .nav-item .nav-link {
+    padding: 0.5rem 8px;
+  }
+  .item-title {
+    margin-bottom: 50px;
+  }
+  .item-description {
+    display: none;
+  }
+  .sub-categories {
+    display: none;
+  }
+  .recent-posts,
+  .popular-post-container {
+    margin-top: 50px;
+  }
+  .single-post,
+  .popular-post,
+  .recent-post-card {
+    width: 90vw !important;
+  }
+  .recent-post-card {
+    margin: 10px 0;
+    padding: 0;
+  }
+}
+
+@media only screen and (max-width: 650px) {
   .general-body {
     display: grid;
     grid-template-rows: 1fr, 2fr, 1fr;
+  }
+}
+
+@media only screen and (min-width: 651px) and (max-width: 900px) {
+  .nav-item .nav-link {
+    padding: 0.5rem 1rem;
+  }
+  .general-body {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    width: 100vw;
+  }
+  .sub-categories {
+    display: none;
+  }
+  .posts {
+    margin: 0 20px;
+  }
+  .single-post {
+    width: 55vw !important;
+  }
+  .sidebar {
+    width: 40vw !important;
+  }
+  .recent-posts {
+    margin-top: 0;
+    top: -90px;
+    position: relative;
+  }
+  .recent-post-card {
+    display: flex;
+    flex-direction: column;
   }
 }

@@ -29,9 +29,9 @@ const Slider = () => {
           <Carousel.Item key={i}>
             <img src={item.image} alt={item.title} width={width} />
             <Carousel.Caption>
-              <button>{item.button}</button>
-              <h3>lorem ispum</h3>
-              <p>{item.description}</p>
+              <button className="px-3">{item.button}</button>
+              <h3 className="item-title">lorem ispum</h3>
+              <p className="item-description">{item.description}</p>
             </Carousel.Caption>
           </Carousel.Item>
         );
