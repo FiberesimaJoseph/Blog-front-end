@@ -22,11 +22,13 @@ const AppBar = () => {
       <Navbar.Toggle aria-controls="responsive-navbar-nav" />
       <Navbar.Collapse id="responsive-navbar-nav">
         <Nav className="ml-auto">
-        <button className="btn btn-default">
-          <img src="/searchIcon.svg" alt="ico"></img>
-        </button>
+          <button className="btn btn-default">
+            <img src="/searchIcon.svg" alt="ico"></img>
+          </button>
           {navLinks.map((link, i) => (
-            <Nav.Link className="app-bar-text mx-2" to={link.path} key={i}>{link.title}</Nav.Link>
+            <Nav.Link className="app-bar-text mx-2" to={link.path} key={i}>
+              {link.title}
+            </Nav.Link>
           ))}
         </Nav>
       </Navbar.Collapse>

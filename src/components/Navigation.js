@@ -39,16 +39,6 @@ const Navigation = () => {
         </Nav.Item>
       ))}
     </Nav>
-
-    // <div className="nav-bar">
-    //   <ul className="nav">
-    //     {navLinks.map((link, i) => (
-    //       <li className="nav-item" key={i}>
-    //         <Link to={link.path}>{link.title}</Link>
-    //       </li>
-    //     ))}
-    //   </ul>
-    // </div>
   );
 };
 
