@@ -31,7 +31,7 @@ const App = () => {
         <NavRoute exact path="/general" component={General} />
         <NavRoute exact path="/about-us" component={About}></NavRoute>
         <NavRoute exact path="/developers" component={Developers}></NavRoute>
-        <Route path="/admin" component={Admin} />
+        <Route exact path="/admin" component={Admin} />
       </Switch>
     </BrowserRouter>
   );

@@ -5,6 +5,7 @@
 
 @import "./general";
 @import "./auth";
+@import "./admin.scss";
 
 @function weight($weight-name) {
   @return map-get($weight-name);
