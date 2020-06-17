@@ -72,3 +72,17 @@
     }
   }
 }
+
+.navigation-link {
+  margin: 0 5px;
+
+  a {
+    text-decoration: none;
+    color: $brand-color;
+
+    &:hover {
+      color: white;
+      background-color: $brand-color;
+    }
+  }
+}

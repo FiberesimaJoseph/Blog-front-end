@@ -12,10 +12,6 @@ const Footer = () => {
       path: "/",
     },
     {
-      title: "Copyright",
-      path: "/",
-    },
-    {
       title: "Creators",
       path: "/",
     },
@@ -31,7 +27,16 @@ const Footer = () => {
       title: "Privacy Policy & Safety",
       path: "/",
     },
+    {
+      title: "About the Blog",
+      path: "/about-blog",
+    },
+    {
+      title: "Admin",
+      path: "/admin",
+    },
   ];
+
   return (
     <div className="footer">
       {links.map((link, i) => (
