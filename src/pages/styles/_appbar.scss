@@ -13,3 +13,15 @@
     }
   }
 }
+
+.appbar-link {
+  text-decoration: none;
+  color: $brand-color;
+  padding: 5px;
+  border-radius: 5px;
+
+  &:hover {
+    color: white;
+    background-color: $brand-color;
+  }
+}
