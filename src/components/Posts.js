@@ -40,7 +40,7 @@ const Posts = () => {
           <Card.Body>
             <Card.Title>{post.title}</Card.Title>
             <Card.Text>{post.content}</Card.Text>
-            {/* <button className="px-3">Read more</button> */}
+
             <div className="like-section">
               <LikeComment
                 commentClicked={commentClicked}

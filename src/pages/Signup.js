@@ -39,14 +39,9 @@ export default function Signup() {
               </Link>
             </li>
             <li className="nav-item ml-auto mt-2">
-              <a className="nav-link" href="/about">
-                ABOUT US
-              </a>
-            </li>
-            <li className="nav-item mt-2">
-              <a className="nav-link" href="/support">
-                SUPPORT
-              </a>
+              <Link className="nav-link" to="/about-us">
+                ABOUT
+              </Link>
             </li>
           </ul>
           <div className="row">

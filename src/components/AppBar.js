@@ -1,5 +1,5 @@
 import React from "react";
-// import { Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { Navbar, Nav } from "react-bootstrap";
 
 const navLinks = [
@@ -26,9 +26,9 @@ const AppBar = () => {
             <img src="/searchIcon.svg" alt="ico"></img>
           </button>
           {navLinks.map((link, i) => (
-            <Nav.Link className="appbar-link mx-2" to={link.path} key={i}>
+            <Link className="appbar-link mx-2" to={link.path} key={i}>
               {link.title}
-            </Nav.Link>
+            </Link>
           ))}
         </Nav>
       </Navbar.Collapse>

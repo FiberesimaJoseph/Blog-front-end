@@ -31,10 +31,6 @@ const Footer = () => {
       title: "About the Blog",
       path: "/about-blog",
     },
-    {
-      title: "Admin",
-      path: "/admin",
-    },
   ];
 
   return (

@@ -9,6 +9,7 @@ const Textarea = () => {
         id="exampleFormControlTextarea1"
         rows="5"
       />
+      <button className="px-3">Submit</button>
     </div>
   );
 };

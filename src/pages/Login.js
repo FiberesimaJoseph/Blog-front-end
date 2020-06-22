@@ -37,14 +37,9 @@ export default function Login() {
               </Link>
             </li>
             <li className="nav-item ml-auto mt-2">
-              <a className="nav-link" href="/about">
+              <Link className="nav-link" to="/about-us">
                 ABOUT
-              </a>
-            </li>
-            <li className="nav-item mt-2">
-              <a className="nav-link" href="/support">
-                SUPPORT
-              </a>
+              </Link>
             </li>
           </ul>
           <div className="row">
