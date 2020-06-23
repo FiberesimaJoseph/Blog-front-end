@@ -1,0 +1,17 @@
+.create-post {
+  width: 100%;
+}
+
+.create-post-buttons {
+  width: 90%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10px;
+}
+
+.create-post-buttons button {
+  background-color: black;
+  color: white;
+  border-radius: 5px;
+}

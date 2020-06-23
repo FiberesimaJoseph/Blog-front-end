@@ -5,15 +5,15 @@ import Sidebar from "../components/Sidebar";
 
 import postService from "../services/postService";
 
-const News = () => {
+const Africanstories = () => {
   const [posts, setPosts] = useState([]);
 
   useEffect(() => {
-    postService.getNews().then((newPosts) => setPosts(newPosts));
+    postService.getAfricanStories().then((newPosts) => setPosts(newPosts));
   }, []);
 
   return (
-    <div className="news">
+    <div className="african-stories">
       <div className="general-body">
         <SubCategories />
         <Posts posts={posts} />
@@ -23,4 +23,4 @@ const News = () => {
   );
 };
 
-export default News;
+export default Africanstories;

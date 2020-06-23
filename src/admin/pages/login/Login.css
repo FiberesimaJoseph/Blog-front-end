@@ -1,0 +1,16 @@
+.form_container {
+  display: flex;
+  height: 400px;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.form_container h1 {
+  margin: 30px;
+}
+
+.form-block {
+  width: 50%;
+  min-width: 370px;
+}
