@@ -1,18 +1,19 @@
-import React from "react";
+import React, { useState } from "react";
 
-const LikeComment = ({ commentClicked, setCommentClick }) => {
+const LikeComment = ({ commentClicked, setCommentClick, likes }) => {
+  const [likeClicked, setLikeClicked] = useState(true);
+
   return (
     <div className="like-unlike">
-      <button>
-        <i className="fa fa-thumbs-o-up" aria-hidden="true">
-          Like
+      <button onClick={() => setLikeClicked(!likeClicked)}>
+        <i
+          className={likeClicked ? "fa fa-thumbs-o-up" : "fa fa-thumbs-o-down"}
+          aria-hidden="true"
+        >
+          {likeClicked ? "Like" : "Unlike"}
         </i>
       </button>
-      <button>
-        <i className="fa fa-thumbs-o-down" aria-hidden="true">
-          Unlike
-        </i>
-      </button>
+      {/* <span>{likes} likes</span> */}
       <button
         onClick={() => {
           setCommentClick(!commentClicked);

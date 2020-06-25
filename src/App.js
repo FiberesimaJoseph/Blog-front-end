@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
 import Login from "./pages/Login";
 import AppBar from "./components/AppBar";
@@ -16,6 +16,7 @@ import Sports from "./pages/Sports";
 import AdminAppBar from "./admin/components/AppBar";
 import AdminLogin from "./admin/pages/login/AdminLogin";
 import AdminPosts from "./admin/pages/posts/AdminPosts";
+import userContext from "./context/userContext";
 
 const NavRoute = ({ exact, path, component }) => {
   return (
@@ -41,24 +42,31 @@ const AdminNavRoute = ({ exact, path, component }) => {
 };
 
 const App = () => {
+  const [userData, setUserData] = useState({
+    token: undefined,
+    user: undefined,
+  });
+
   return (
     <BrowserRouter>
-      <Switch>
-        <NavRoute exact path="/" component={General} />
-        <Route exact path="/login" component={Login} />
-        <Route exact path="/register" component={Signup} />
-        <NavRoute exact path="/african-stories" component={Africanstories} />
-        <NavRoute exact path="/general" component={General} />
-        <NavRoute exact path="/about-us" component={About} />
-        <NavRoute exact path="/developers" component={Developers} />
-        <NavRoute exact path="/about-blog" component={AboutBlog} />
-        <NavRoute exact path="/contact-us" component={Contact} />
-        <NavRoute exact path="/musics" component={Musics} />
-        <NavRoute exact path="/news" component={News} />
-        <NavRoute exact path="/sports" component={Sports} />
-        <Route exact path="/admin" component={AdminLogin} />
-        <AdminNavRoute path="/admin/posts" component={AdminPosts} />
-      </Switch>
+      <userContext.Provider value={{ userData, setUserData }}>
+        <Switch>
+          <NavRoute exact path="/" component={General} />
+          <Route exact path="/login" component={Login} />
+          <Route exact path="/register" component={Signup} />
+          <NavRoute exact path="/african-stories" component={Africanstories} />
+          <NavRoute exact path="/general" component={General} />
+          <NavRoute exact path="/about-us" component={About} />
+          <NavRoute exact path="/developers" component={Developers} />
+          <NavRoute exact path="/about-blog" component={AboutBlog} />
+          <NavRoute exact path="/contact-us" component={Contact} />
+          <NavRoute exact path="/musics" component={Musics} />
+          <NavRoute exact path="/news" component={News} />
+          <NavRoute exact path="/sports" component={Sports} />
+          <Route exact path="/admin/login" component={AdminLogin} />
+          <AdminNavRoute path="/admin/posts" component={AdminPosts} />
+        </Switch>
+      </userContext.Provider>
     </BrowserRouter>
   );
 };

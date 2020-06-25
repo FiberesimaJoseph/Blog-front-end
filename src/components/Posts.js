@@ -5,7 +5,14 @@ import LikeComment from "./LikeComment";
 
 const Posts = ({ posts }) => {
   const [commentClicked, setCommentClick] = useState(false);
-
+  const [expandedText, setExpandedText] = useState(false);
+  const cardText = (post) => {
+    if (posts !== null || posts !== undefined) {
+      return expandedText
+        ? post.content
+        : post.content.split(" ").slice(0, 20).join(" ");
+    }
+  };
   return (
     <div className="posts">
       {posts.map((post, i) => (
@@ -13,12 +20,15 @@ const Posts = ({ posts }) => {
           <Card.Img variant="top" src="https://picsum.photos/400/400" />
           <Card.Body>
             <Card.Title>{post.heading}</Card.Title>
-            <Card.Text>{post.content}</Card.Text>
-
+            <Card.Text>{cardText(post)}</Card.Text>
+            <button onClick={() => setExpandedText(!expandedText)}>
+              Read more
+            </button>
             <div className="like-section">
               <LikeComment
                 commentClicked={commentClicked}
                 setCommentClick={setCommentClick}
+                likes={post.likes}
               />
             </div>
             <div>{commentClicked ? <Textarea /> : null}</div>
