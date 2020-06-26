@@ -10,13 +10,13 @@ const Posts = ({ posts }) => {
     if (posts !== null || posts !== undefined) {
       return expandedText
         ? post.content
-        : post.content.split(" ").slice(0, 20).join(" ");
+        : post.content.split(" ").slice(0, 60).join(" ");
     }
   };
   return (
     <div className="posts">
       {posts.map((post, i) => (
-        <Card style={{ width: "30rem" }} key={i} className="single-post">
+        <Card style={{ width: "40rem" }} key={i} className="single-post">
           <Card.Img variant="top" src="https://picsum.photos/400/400" />
           <Card.Body>
             <Card.Title>{post.heading}</Card.Title>

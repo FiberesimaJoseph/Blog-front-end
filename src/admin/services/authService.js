@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const url = "http://localhost:5000/api/admins/";
+const url = "/api/admins";
 
 const login = (values) => {
   const request = axios.post(`${url}/login`, values);
@@ -8,8 +8,14 @@ const login = (values) => {
 };
 
 const verify = (token) => {
-  const request = axios.post(`${url}/tokenisvalid`, token);
-  return request.then((data) => data);
+  const request = axios({
+    method: "POST",
+    url: `${url}/tokenisvalid`,
+    headers: {
+      Authorization: token,
+    },
+  }).then((data) => data);
+  return request;
 };
 
 export default { login, verify };

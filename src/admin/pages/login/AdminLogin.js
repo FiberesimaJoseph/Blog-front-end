@@ -19,14 +19,14 @@ const AdminLogin = () => {
   const handleSubmit = (event) => {
     event.preventDefault();
     authService.login({ username, password }).then((data) => {
-      console.log(data);
       localStorage.setItem(
         "login",
         JSON.stringify({
-          token: data.token,
+          token: `Bearer ${data.token}`,
           user: data.user,
         })
       );
+      console.log(data);
       history.push("/admin/posts");
     });
   };
@@ -35,7 +35,7 @@ const AdminLogin = () => {
     <div className="form_container">
       <h1>Admin Login</h1>
       <div className="form-block">
-        <Form>
+        <Form onSubmit={handleSubmit}>
           <Form.Group controlId="formBasicEmail">
             <Form.Label>Username</Form.Label>
             <Form.Control
@@ -58,7 +58,7 @@ const AdminLogin = () => {
               onChange={handlePasswordChange}
             />
           </Form.Group>
-          <Button variant="primary" type="submit" onClick={handleSubmit}>
+          <Button variant="primary" type="submit">
             Submit
           </Button>
         </Form>

@@ -1,7 +1,7 @@
 import React from "react";
 
-const Users = () => {
+const AdminUsers = () => {
   return <div>This module is not built yet</div>;
 };
 
-export default Users;
+export default AdminUsers;

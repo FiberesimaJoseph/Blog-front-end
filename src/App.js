@@ -13,10 +13,11 @@ import Contact from "./pages/Contact";
 import Musics from "./pages/Musics";
 import News from "./pages/News";
 import Sports from "./pages/Sports";
-import AdminAppBar from "./admin/components/AppBar";
 import AdminLogin from "./admin/pages/login/AdminLogin";
 import AdminPosts from "./admin/pages/posts/AdminPosts";
+import AdminUsers from "./admin/pages/users/AdminUsers";
 import userContext from "./context/userContext";
+import ProtectedAdminRoutes from "./ProtectedAdminRoutes";
 
 const NavRoute = ({ exact, path, component }) => {
   return (
@@ -24,17 +25,6 @@ const NavRoute = ({ exact, path, component }) => {
       <header>
         <AppBar />
         <Navigation />
-      </header>
-      <Route exact={exact} path={path} component={component} />
-    </div>
-  );
-};
-
-const AdminNavRoute = ({ exact, path, component }) => {
-  return (
-    <div>
-      <header>
-        <AdminAppBar />
       </header>
       <Route exact={exact} path={path} component={component} />
     </div>
@@ -64,7 +54,16 @@ const App = () => {
           <NavRoute exact path="/news" component={News} />
           <NavRoute exact path="/sports" component={Sports} />
           <Route exact path="/admin/login" component={AdminLogin} />
-          <AdminNavRoute path="/admin/posts" component={AdminPosts} />
+          <ProtectedAdminRoutes
+            exact
+            path="/admin/posts"
+            component={AdminPosts}
+          />
+          <ProtectedAdminRoutes
+            exact
+            path="/admin/users"
+            component={AdminUsers}
+          />
         </Switch>
       </userContext.Provider>
     </BrowserRouter>
