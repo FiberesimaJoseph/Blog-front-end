@@ -1,3 +1,6 @@
+This is a React project built for naijagotentertainment buzz 
+as an entertainment blog 
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts

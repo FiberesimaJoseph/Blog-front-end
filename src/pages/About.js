@@ -7,7 +7,7 @@ const About = () => {
       <Container>
         <img src="cropped-biosoky.png" alt=""></img>
         <div>
-          <h1>ABOUT THE BLOG OWNER</h1>
+          <h1>ABOUT THE BLOG </h1>
           <p>
             Festus west is the CEO of Biosoky Entertainment Ltd. It was
             established in the year 2012, His passion for entertainment gave
